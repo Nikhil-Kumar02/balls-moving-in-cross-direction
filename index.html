@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Symbol</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            border: 3px solid black;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circles{
+            height: 650px;
+            width: 650px;
+            background-color:darkslategrey;
+            border: 5px solid crimson;
+            position: relative;
+        }
+        .ball{
+            height: 75px;
+            width: 75px;
+            border: 3px solid gold;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+        }
+        #textStyle{
+            font-style: normal;
+            font-size: 50px;
+            text-align: center;
+            color: floralwhite;
+        }
+        #ball1{
+            background-color: chocolate;
+            position: absolute;
+            animation: topLeft_to_bottomRight 3s linear 0s infinite normal both;
+        }
+        @keyframes topLeft_to_bottomRight {
+            0%{
+                top: 0px;
+                left: 160px;
+                transform: rotate(0deg);
+            }
+            25%{
+                top: 400px;
+                left: 560px;
+                transform: rotate(90deg);
+            }
+            50%{
+                top: 560px;
+                left: 400px;
+                transform: rotate(180deg);
+            }
+            75%{
+                top: 160px;
+                left: 0px;
+                transform: rotate(270deg);
+            }
+            100%{
+                top: 0px;
+                left: 160px;
+                transform: rotate(360deg);
+            }
+        }
+        
+        #ball2{
+            background-color: chartreuse;
+            position: absolute;
+            animation: topRight_to_bottomLeft 3s linear 0s infinite normal both;
+        }
+        @keyframes topRight_to_bottomLeft {
+            0%{
+                top: 160px;
+                right: 0px;;
+                transform: rotate(0deg);
+            }
+            25%{
+                top: 560px;
+                right: 400px;
+                transform: rotate(90deg);
+            }
+            50%{
+                top: 400px;
+                right: 560px;                
+                transform: rotate(180deg);
+            }
+            75%{
+                top: 0px;
+                right: 160px;              
+                transform: rotate(270deg);
+            }
+            100%{
+                top: 160px;
+                right: 0px;                
+                transform: rotate(360deg);
+            }
+        }
+        
+        #ball3{
+            background-color: cadetblue;
+            position: absolute;
+            animation: bottomRight_to_topLeft 3s linear 0s infinite normal both;
+        }
+        @keyframes bottomRight_to_topLeft {
+            0%{
+                bottom: 160px;
+                right: 0px;;
+                transform: rotate(0deg);
+            }
+            25%{
+                bottom: 0px;
+                right: 160px;
+                transform: rotate(90deg);
+            }
+            50%{
+                bottom: 400px;
+                right: 560px;                
+                transform: rotate(180deg);
+            }
+            75%{
+                bottom: 560px;
+                right: 400px;              
+                transform: rotate(270deg);
+            }
+            100%{
+                bottom: 160px;
+                right: 0px;                
+                transform: rotate(360deg);
+            }
+        }
+
+        #ball4{
+            background-color: rgb(182, 47, 182);
+            position: absolute;
+            animation: bottomLeft_to_topRight 3s linear 0s infinite normal both;
+        }
+        @keyframes bottomLeft_to_topRight {
+            0%{
+                bottom: 0px;
+                left: 160px;;
+                transform: rotate(0deg);
+            }
+            25%{
+                bottom: 160px;
+                left: 0px;
+                transform: rotate(90deg);
+            }
+            50%{
+                bottom: 560px;
+                left: 400px;                
+                transform: rotate(180deg);
+            }
+            75%{
+                bottom: 400px;
+                left: 560px;              
+                transform: rotate(270deg);
+            }
+            100%{
+                bottom: 0px;
+                left: 160px;                
+                transform: rotate(360deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circles">
+            <div class="ball" id="ball1"><p id="textStyle"> 1 </p></div>
+            <div class="ball" id="ball2"><p id="textStyle"> 2 </p></div>
+            <div class="ball" id="ball3"><p id="textStyle"> 3 </p></div>
+            <div class="ball" id="ball4"><p id="textStyle"> 4 </p></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
